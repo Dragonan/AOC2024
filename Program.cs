@@ -1,4 +1,6 @@
-﻿var timer = new System.Diagnostics.Stopwatch();
+﻿using AOC2024;
+
+var timer = new System.Diagnostics.Stopwatch();
 timer.Start();
 
 
