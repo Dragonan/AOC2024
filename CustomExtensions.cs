@@ -13,4 +13,8 @@ public static class CustomExtensions
         return result;
     }
 
+    public static T[] RemoveAt<T>(this T[] array, int index)
+    {
+        return array.Take(index).Concat(array.Skip(index + 1)).ToArray();
+    }
 }
