@@ -28,4 +28,9 @@ public static class CustomExtensions
         return point.X >= lengthX || 0 > point.X ||
             point.Y >= lengthY || 0 > point.Y;
     }
+
+    public static int Length(this ulong n)
+    {
+        return n == 0 ? 1 : ((int)Math.Log10(n) + 1);
+    }
 }
