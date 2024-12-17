@@ -6,6 +6,7 @@ namespace AOC2024
     {
         public static void Draw(IEnumerable<string> lines, bool clear = true)
         {
+            Console.CursorVisible = false;
             if (clear)
                 Console.Clear();
             Console.SetCursorPosition(0, 0);
@@ -13,8 +14,31 @@ namespace AOC2024
                 Console.WriteLine(line);
         }
 
+        public static void DrawLine(string line, int[]? toColor = null, ConsoleColor color = ConsoleColor.Gray, ConsoleColor background = ConsoleColor.Black)
+        {
+            toColor ??= new int[0];
+            Console.CursorVisible = false;
+            Console.SetCursorPosition(0,Console.GetCursorPosition().Top-1);
+            for (int i = 0; i < line.Length; i++)
+            {
+                if (toColor.Contains(i))
+                {
+                    Console.ForegroundColor = color;
+                    Console.BackgroundColor = background;
+                }
+
+                Console.Write(line[i]);
+                
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.BackgroundColor = ConsoleColor.Black;
+            }
+            
+            Console.WriteLine(new string(' ', Console.WindowWidth - line.Length));
+        }
+
         public static void DrawWithColor(string[] lines, List<Point> toColor, ConsoleColor color, ConsoleColor background = ConsoleColor.Black, bool clear = true)
         {
+            Console.CursorVisible = false;
             if (clear)
                 Console.Clear();
             Console.SetCursorPosition(0, 0);
@@ -37,6 +61,7 @@ namespace AOC2024
 
         public static void DrawWithColors(string[] lines, List<List<Point>> spaces, ConsoleColor[] colors, ConsoleColor[] backgrounds)
         {
+            Console.CursorVisible = false;
             Console.Clear();
             Console.SetCursorPosition(0, 0);
             for (int i = 0; i < lines.Length; i++)
