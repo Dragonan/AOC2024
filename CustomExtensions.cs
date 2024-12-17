@@ -40,4 +40,16 @@ public static class CustomExtensions
     {
         return n == 0 ? 1 : ((int)Math.Log10(n) + 1);
     }
+
+    public static Directions Opposite(this Directions dir)
+    {
+        switch (dir)
+        {
+            case Directions.Up: return Directions.Down;
+            case Directions.Down: return Directions.Up;
+            case Directions.Left: return Directions.Right;
+            case Directions.Right: return Directions.Left;
+            default: return Directions.Up;
+        }
+    }
 }
