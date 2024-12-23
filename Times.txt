@@ -20,6 +20,6 @@ Day | Start |       Part 1           |       Part 2           |        Notes
  19 | 07:58 | 09:50 (52 mins)        | 20:15 (+8 hrs 25 mins) | *took a break from 13:00 to 15:00
  20 | 08:02 | 08:34 (32 mins)        | 08:50 (+16 mins)       |
  21 | 13:40 | 19:52 (6 hrs 12 mins)  | 20:16 (+24 mins)       |
- 22 |
+ 22 | 09:29 | 09:53 (24 mins)        | 10:34 (+41 mins)       |
  23 |
  24 |
